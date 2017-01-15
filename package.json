@@ -5,12 +5,19 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "next"
+    "dev": "next",
+    "build-non-next": "browserify non-next.js -o bundle.js -t [ babelify --presets [ latest react ] ]"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "next": "^1.2.3"
+    "next": "=2.0.0-beta.17"
+  },
+  "devDependencies": {
+    "babelify": "^7.3.0",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "browserify": "^13.3.0"
   }
 }
